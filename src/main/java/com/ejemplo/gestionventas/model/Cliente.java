@@ -11,7 +11,7 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
 @Entity
-@Data
+@Data //Genera getter y setter automaticamente. Proviene de lombok
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "clientes")

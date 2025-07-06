@@ -26,7 +26,7 @@ public class FacturaService {
 
     public Factura crear(Long clienteId, Factura facturas) {
         Cliente cliente = clienteRepo.findById(clienteId)
-                .orElseThrow(()-> new RuntimeException("Cliente no encontrado")); 
+                .orElseThrow(()-> new RuntimeException("Cliente no encontrado: " + clienteId)); 
 
         facturas.setCliente(cliente);
         return facturaRepo.save(facturas);
